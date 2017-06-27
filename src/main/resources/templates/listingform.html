@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">>
+<head>
+<meta charset="UTF-8">
+<title>village listings</title>
+</head>
+<body>
+
+<div>
+	<h2> Listing Details </h2>
+	
+	<form  th: object="${listing}" th: action="@{/listing}" method="post">
+	<p> ID: <input type="hidden" th:field="*{id}"/>
+	<span th: if="${#fields.hasErrors('id')}" th:errors="*{id}">Id Error </span></p>
+	
+	
+	
+	
+	<p> Address:<br> <input type="text" name="address"><br>
+	<span th:if="${#fields.hasErrors('address')}" th:errors="*{address}" Address Error</span></p>
+	City: <br> <input type="text" name="city"><br>
+	
+	State: <br> <input type="text" name"state"><br>
+	
+	<input type="radio" name="isrented" value="rented" checked> Rented<br>
+	<input type="radio" name="isrented" value="notrented"> Not Rented<br>
+	
+	<textarea name ="description" rows="10" cols="30"> Listing Description </textarea>
+	
+	<textarea name ="rules" rows="10" cos="30"> Rules </textarea>
+	 
+	 <input type="radio" name="wifi" value="wifi" checked> WIFI<br>
+	 <input type="radio" name="wifi" value="nowifi"> No Wifi<br>
+	 
+	  <input type="radio" name="cable" value="cable" checked> cable<br>
+	 <input type="radio" name="cable" value="nocable"> No cable<br>
+	 
+	   <input type="radio" name="pbathroom" value="bath" checked>Private Bathroom<br>
+	 <input type="radio" name="pbathroom" value="nobath"> No Private Bathroom<br>
+	 
+
+	 <button type="submit" class="btn btn-default">Submit</button>
+	 
+	
+	
+	</form>
+
+</div>
+
+</body>
+</html>
