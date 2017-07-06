@@ -29,12 +29,12 @@ public class Listing {
     @NotNull
     @Min(1)
 	private long price;
-	private boolean isrented;
+	private String isrented;
 	private String description;
 	private String rules;
-	private boolean wifi;
+	private String wifi;
 	private String cable;
-	private boolean pbathroom;
+	private String pbathroom;
 	
 	
 	
@@ -64,10 +64,10 @@ public class Listing {
 	public void setPrice(long price) {
 		this.price = price;
 	}
-	public boolean isIsrented() {
+	public String isIsrented() {
 		return isrented;
 	}
-	public void setIsrented(boolean isrented) {
+	public void setIsrented(String isrented) {
 		this.isrented = isrented;
 	}
 	public String getDescription() {
@@ -82,10 +82,10 @@ public class Listing {
 	public void setRules(String rules) {
 		this.rules = rules;
 	}
-	public boolean isWifi() {
+	public String isWifi() {
 		return wifi;
 	}
-	public void setWifi(boolean wifi) {
+	public void setWifi(String wifi) {
 		this.wifi = wifi;
 	}
 	public String getCable() {
@@ -94,10 +94,10 @@ public class Listing {
 	public void setCable(String cable) {
 		this.cable = cable;
 	}
-	public boolean isPbathroom() {
+	public String isPbathroom() {
 		return pbathroom;
 	}
-	public void setPbathroom(boolean pbathroom) {
+	public void setPbathroom(String pbathroom) {
 		this.pbathroom = pbathroom;
 	}
 

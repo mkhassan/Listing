@@ -2,7 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="en" >
 
-		<title> Listings </title>
+<title> Listings </title>
+
+
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
 		
 </head>
@@ -14,7 +21,7 @@
 
   <div th:if="${not #lists.isEmpty(transactions)}">
   
-  	<h2> Room List</h2>
+  	<h2> Room Listings</h2>
   	<table class="table table-striped">
   	
   		<tr>
@@ -31,7 +38,7 @@
   		<tr th:each="listing: ${listings}">
   			<td th:text="${listing.id}"><a href="/listing/${listing.id}">Id</a></td>
   			<td th:text="${listing.address}"> Address </td>
-  			<td th:text="${listing.city}"> </td>
+  			<td th:text="${listing.city}"> City </td>
   			<td th:text="${state.price}"> Price</td>
   			<td th:text="${transaction.isrented}">Status</td>
   			
